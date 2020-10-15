@@ -20,6 +20,9 @@ namespace UserRegistrationProgram
             Console.WriteLine("Enter the the mobile num with country code");
             string mob = Console.ReadLine();
             pattern.validateMobile(mob);
+            Console.WriteLine("Enter the password");
+            string password = Console.ReadLine();
+            pattern.validatePassword(password);
         }
     }
 }
