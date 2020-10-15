@@ -7,16 +7,16 @@ namespace UserRegistrationProgram
 {
     class Pattern
     {
-        string firstName = "^[A-Z][a-z0-9A-Z]{3,}";
-        public void validateFirstName(string fname)
+        string Name = "^[A-Z][a-z0-9A-Z]{3,}";
+        public void validateName(string name)
         {
-            if (Regex.IsMatch(fname, firstName))
+            if (Regex.IsMatch(name, Name))
             {
-                Console.WriteLine("Valid first name");
+                Console.WriteLine("Valid name");
             }
             else
             {
-                Console.WriteLine("Invalid first name");
+                Console.WriteLine("Invalid name");
             }
         }
     }

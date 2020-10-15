@@ -10,7 +10,10 @@ namespace UserRegistrationProgram
             Pattern pattern = new Pattern();
             Console.WriteLine("Enter the first name");
             string fname = Console.ReadLine();
-            pattern.validateFirstName(fname);
+            pattern.validateName(fname);
+            Console.WriteLine("Enter the Last name");
+            string lastName = Console.ReadLine();
+            pattern.validateName(lastName);
         }
     }
 }
