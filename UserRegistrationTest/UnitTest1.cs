@@ -54,5 +54,143 @@ namespace UserRegistrationTest
             string result = pattern.validateEmail(email);
             Assert.AreEqual("Valid", result);
         }
+        [TestMethod]
+        public void Given_Empty_FirstName_Should_Throw_UserRegistrationException_Indicating_EmptyInput()
+        {
+            try
+            {
+                string name = string.Empty;
+                Pattern pattern = new Pattern();
+                string result = pattern.validateName(name);
+            }
+            catch (UserRegistrationCustomException e)
+            {
+                Assert.AreEqual("Name should not be empty", e.Message);
+            }
+        }
+        [TestMethod]
+        public void Given_NULL_FirstName_Should_Throw_UserRegistrationException()
+        {
+            try
+            {
+                string name = null;
+                Pattern pattern = new Pattern();
+                string result = pattern.validateName(name);
+            }
+            catch (UserRegistrationCustomException e)
+            {
+                Assert.AreEqual("Name should not be null", e.Message);
+            }
+        }
+        [TestMethod]
+        public void Given_Empty_LastName_Should_Throw_UserRegistrationException_Indicating_EmptyInput()
+        {
+            try
+            {
+                string name = string.Empty;
+                Pattern pattern = new Pattern();
+                string result = pattern.validateName(name);
+            }
+            catch (UserRegistrationCustomException e)
+            {
+                Assert.AreEqual("Name should not be empty", e.Message);
+            }
+        }
+        [TestMethod]
+        public void Given_NULL_LastName_Should_Throw_UserRegistrationException()
+        {
+            try
+            {
+                string name = null;
+                Pattern pattern = new Pattern();
+                string result = pattern.validateName(name);
+            }
+            catch (UserRegistrationCustomException e)
+            {
+                Assert.AreEqual("Name should not be null", e.Message);
+            }
+        }
+        [TestMethod]
+        public void Given_Empty_Email_Should_Throw_UserRegistrationException_Indicating_EmptyInput()
+        {
+            try
+            {
+                string email = string.Empty;
+                Pattern pattern = new Pattern();
+                string result = pattern.validateEmail(email);
+            }
+            catch (UserRegistrationCustomException e)
+            {
+                Assert.AreEqual("Email should not be empty", e.Message);
+            }
+        }
+        [TestMethod]
+        public void Given_NULL_Email_Should_Throw_UserRegistrationException()
+        {
+            try
+            {
+                string email = null;
+                Pattern pattern = new Pattern();
+                string result = pattern.validateEmail(email);
+            }
+            catch (UserRegistrationCustomException e)
+            {
+                Assert.AreEqual("Email should not be null", e.Message);
+            }
+        }
+        public void Given_Empty_Mobile_Should_Throw_UserRegistrationException_Indicating_EmptyInput()
+        {
+            try
+            {
+                string mobile = string.Empty;
+                Pattern pattern = new Pattern();
+                string result = pattern.validateMobile(mobile);
+            }
+            catch (UserRegistrationCustomException e)
+            {
+                Assert.AreEqual("Mobile Number should not be empty", e.Message);
+            }
+        }
+        [TestMethod]
+        public void Given_NULL_Mobile_Should_Throw_UserRegistrationException()
+        {
+            try
+            {
+                string mobile = null;
+                Pattern pattern = new Pattern();
+                string result = pattern.validateMobile(mobile);
+            }
+            catch (UserRegistrationCustomException e)
+            {
+                Assert.AreEqual("Mobile Number should not be null", e.Message);
+            }
+        }
+        public void Given_Empty_Password_Should_Throw_UserRegistrationException_Indicating_EmptyInput()
+        {
+            try
+            {
+                string password = string.Empty;
+                Pattern pattern = new Pattern();
+                string result = pattern.validatePassword(password);
+            }
+            catch (UserRegistrationCustomException e)
+            {
+                Assert.AreEqual("Password should not be empty", e.Message);
+            }
+        }
+        [TestMethod]
+        public void Given_NULL_Password_Should_Throw_UserRegistrationException()
+        {
+            try
+            {
+                string password = null;
+                Pattern pattern = new Pattern();
+                string result = pattern.validatePassword(password);
+            }
+            catch (UserRegistrationCustomException e)
+            {
+                Assert.AreEqual("Password should not be null", e.Message);
+            }
+        }
     }
 }
