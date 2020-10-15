@@ -39,5 +39,20 @@ namespace UserRegistrationTest
             Assert.AreEqual("Invalid", emailTest);
             Assert.AreEqual("Invalid", passwordTest);
         }
+
+        [TestMethod]
+
+        [DataRow("abc@gmail.com")]
+        [DataRow("ac33@gmail.com")]
+        [DataRow("abc123ssw@gmail.com")]
+        [DataRow("abc.123@gmail.co.in")]
+        [DataRow("abc123@gil.com")]
+        [DataRow("abc+23@gil.com")]
+        public void Multiple_Email_Enteries(string email)
+        {
+            Pattern pattern = new Pattern();
+            string result = pattern.validateEmail(email);
+            Assert.AreEqual("Valid", result);
+        }
     }
 }
