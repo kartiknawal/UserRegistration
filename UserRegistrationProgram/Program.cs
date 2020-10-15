@@ -17,6 +17,9 @@ namespace UserRegistrationProgram
             Console.WriteLine("Enter the the email id");
             string email = Console.ReadLine();
             pattern.validateEmail(email);
+            Console.WriteLine("Enter the the mobile num with country code");
+            string mob = Console.ReadLine();
+            pattern.validateMobile(mob);
         }
     }
 }
