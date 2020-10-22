@@ -111,5 +111,9 @@ namespace UserRegistrationProgram
             }
 
         }
+        public bool ValidateNameUsingLambda(string name) => Regex.IsMatch(name, Name) ? true : throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.INVALID_NAME, "Invalid Name");
+        public bool ValidateEmailUsingLambda(string email) => Regex.IsMatch(email, EmailId) ? true : throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.INVALID_EMAIL, "Invalid Email");
+        public bool ValidateMobileUsingLambda(string mob) => Regex.IsMatch(mob, mobileNo) ? true : throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.INVALID_PASSWORD, "Invalid Password");
+        public bool ValidatePasswordUsingLambda(string pw) => Regex.IsMatch(pw, Password) ? true : throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.INVALID_MOBILE, "Invalid Mobile Number");
     }
 }

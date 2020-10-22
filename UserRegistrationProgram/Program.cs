@@ -23,6 +23,12 @@ namespace UserRegistrationProgram
             Console.WriteLine("Enter the password");
             string password = Console.ReadLine();
             pattern.validatePassword(password);
+           
+            Console.WriteLine(pattern.ValidateNameUsingLambda(lastName));
+            Console.WriteLine(pattern.ValidateEmailUsingLambda(email));
+            Console.WriteLine(pattern.ValidateMobileUsingLambda(mob));
+            Console.WriteLine(pattern.ValidatePasswordUsingLambda(password));
+
         }
     }
 }

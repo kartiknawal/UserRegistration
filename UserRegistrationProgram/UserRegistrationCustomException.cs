@@ -9,7 +9,11 @@ namespace UserRegistrationProgram
         public enum ExceptionType
         {
             NULL_INPUT,
-            EMPTY_INPUT
+            EMPTY_INPUT,
+            INVALID_NAME,
+            INVALID_MOBILE,
+            INVALID_EMAIL,
+            INVALID_PASSWORD
         }
         private readonly ExceptionType type;
         public UserRegistrationCustomException(ExceptionType Type, String message) : base(message)
